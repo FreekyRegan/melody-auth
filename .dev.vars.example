@@ -1,0 +1,45 @@
+AUTH_SERVER_URL="http://localhost:8787" # The host url of your CF worker
+ENVIRONMENT=dev # Set to prod in production env
+
+
+# Config following env vars for development and testing purposes
+DEV_EMAIL_RECEIVER= # When the ENVIRONMENT is not set to 'prod', all emails intended for users will be sent to this email address instead.
+DEV_SMS_RECEIVER= # When the ENVIRONMENT is not set to 'prod', all SMS messages intended for users will be sent to this phone number instead.
+
+
+# Config following env vars to work with email functionalities
+#SENDGRID_API_KEY= # Put your SendGrid api key here
+#SENDGRID_SENDER_ADDRESS= # Put your SendGrid sender address here
+#MAILGUN_API_KEY= Put your Mailgun api key here and leave SENDGRID_API_KEY to be empty if you want to use Mailgun handle email functionalities
+#MAILGUN_SENDER_ADDRESS= # Put your Mailgun sender address here
+#BREVO_API_KEY= # Put your Brevo api key here and leave both SENDGRID_API_KEY and MAILGUN_API_KEY to be empty if you want to use Brevo handle email functionalities
+#BREVO_SENDER_ADDRESS= # Put your Brevo sender address here
+#RESEND_API_KEY= # Put your Resend api key here and leave SENDGRID_API_KEY, MAILGUN_API_KEY, BREVO_API_KEY empty if you want to use Resend handle email functionalities
+#RESEND_SENDER_ADDRESS= # Put your Resend sender address here
+#POSTMARK_API_KEY= # Put your Postmark api key here
+#POSTMARK_SENDER_ADDRESS= # Put your Postmark sender address here
+
+# Config following env vars to work with SMS MFA
+#TWILIO_ACCOUNT_ID= # Put your Twilio account id here
+#TWILIO_AUTH_TOKEN= # Put your Twilio auth token here
+#TWILIO_SENDER_NUMBER= # Put your Twilio sender number here
+
+
+# Config following env vars to work with social sign-in providers
+#FACEBOOK_AUTH_CLIENT_SECRET= # To work with FACEBOOK_AUTH_CLIENT_ID
+#GITHUB_AUTH_CLIENT_SECRET= # To work with GITHUB_AUTH_CLIENT_ID and GITHUB_AUTH_APP_NAME
+#DISCORD_AUTH_CLIENT_SECRET= # To work with DISCORD_AUTH_CLIENT_ID
+#APPLE_AUTH_CLIENT_SECRET= # To work with APPLE_AUTH_CLIENT_ID
+
+
+# Config following env vars to run this project using node, Postgres and Redis
+# PG_CONNECTION_STRING=postgres://postgres:postgres@127.0.0.1:5432/melody-auth
+# REDIS_CONNECTION_STRING=redis://username:password@127.0.0.1:6379
+
+# If you are running this project using docker, you can use the following env vars
+# PG_CONNECTION_STRING=postgres://admin:admin@postgres:5432/melody-auth
+# REDIS_CONNECTION_STRING=redis://redis:6379
+
+# Config following env vars to use an SMTP mailer server under node environment
+# SMTP_SENDER_ADDRESS=your_email_address
+# SMTP_CONNECTION_STRING=smtp://username:password@smtp.mailserver.com:587
